@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/header.ejs%>
+  </head>
+  <body>
+    <% include partials/main_nav.ejs %>
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="/assets/images/carousel1.jpg" style= "height: 500px; width: 100%;" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Welcome</h1>
+              <p>This is where you can learn more about me.</p>
+              <p><a class="btn btn-large btn-primary" href="/about">Visit me</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/assets/images/carousel2.jpg" style= "height: 500px; width: 100%;" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Software Engineering Services</h1>
+              <p>Java. Python. Front-end and Back end development.</p>
+              <p><a class="btn btn-large btn-primary" href="/services">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/assets/images/carousel3.jpg" style= "height: 500px; width: 100%;" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Contact Me</h1>
+              <p>To get your professional service.</p>
+              <p><a class="btn btn-large btn-primary" href="/contact">Contact me</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> <!--/.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Introduction</h2>
+          <p>I am Aaron Chan, a front end and back end web application developer and software engineer.</p>
+          <p><a class="btn btn-default" href="/About">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2>My Mission</h2>
+          <p>I devoted to provide the best user experience to my clients. With my programming skill, you will get what you need.</p>
+          <p><a class="btn btn-default" href="/Services">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2>Past Projects</h2>
+          <p>You may visit my project page to see my past projects.</p>
+          <p><a class="btn btn-default" href="/Projects">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <% include partials/footer.ejs %>
+  </body>
+</html>

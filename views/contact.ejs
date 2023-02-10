@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/header.ejs%>
+  </head>
+  <body>
+    <% include partials/main_nav.ejs %>
+
+    <!-- Marketing messaging and featurettes-->
+    <br>
+    <br>
+    <div class="container marketing">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Contact me </h2>
+          <p class="lead"> Phone: +1 (647) 686 5865 </p>
+          <p class="lead"> Email: dbsackc@gmail.com </p>
+          <form action="/home" style="text-align:left">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="comment">Your comment:</label><br>
+            <input type="text" id="comment" name="comment" value=""><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+        </div>
+      </div>
+    </div>
+    <% include partials/footer.ejs %>
+  </body>
+</html>
