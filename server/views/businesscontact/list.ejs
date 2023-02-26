@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/header.ejs%>
+  </head>
+  <body>
+    <% include ../partials/main_nav.ejs %>
+
+    <main class="container marketing">
+    <br>
+        <div class = "row featurette">
+            <div class = "col-md-offset-3 col md-8">
+                <h2 class = "featurette-heading" style="margin-top:30px;"><%=title%></h2>
+                <a href="businesscontact/add" class="btn btn-primary" style="margin-bottom:5px" role="button"><i class = "fas fa-plus-circle"></i> Add a Business Contact</a>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th class="text-left col-1">Name</th>
+                        <th class="text-left col-2">Number</th>
+                        <th class="text-left col-2">Email</th>
+
+                    </tr>
+                    <% for(let count = 0; count<BusinessContact.length; count++) {%> 
+                      <tr>
+                          <td class="text-left"><%=BusinessContact[count].name%></td>
+                          <td class="text-left"><%=BusinessContact[count].number%></td>
+                          <td class="text-left"><%=BusinessContact[count].email%></td>
+                          <td class="text-left col-1"><a href="/businesscontact/edit/<%=BusinessContact[count]._id%>" class = "btn btn-primary"><i class = "fas fa-pencil alt"></i> Edit</a></td>
+                          <td class="text-left"><a href="/businesscontact/delete/<%=BusinessContact[count]._id%>" class = "btn btn-danger"><i class = "fas fa-trash-alt"></i> Delete</a></td>
+                      </tr>
+                    <%}%>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <% include ../partials/footer.ejs %>
+  </body>
+</html>
